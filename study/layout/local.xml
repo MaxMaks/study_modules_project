@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+<cms_index_index translate="label">
+    <reference name="content">
+         <block type="study_banner_bannerhtml/banner" after="-" name="page_test" template="study/banner/slider.phtml"/>
+    </reference>
+    <reference name="head">
+            <action method="addJs"><script>lib/jquery/jquery-1.10.2.min.js</script></action>
+            <action method="addJs"><script>flexslider/jquery.flexslider.js</script></action>
+            <action method="addCss"><stylesheet>css/flexslider.css</stylesheet></action>
+    </reference>
+</cms_index_index>
+
+
+    <helloworld_index_index>
+        <block type="page/html" name="root" output="toHtml" template="study/helloworld/simple_page.phtml" />
+    </helloworld_index_index>
+     <helloworld_index_goodbye>
+        <update handle="helloworld_index_index" />
+    </helloworld_index_goodbye>
+</layout>

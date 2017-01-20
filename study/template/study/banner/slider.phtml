@@ -1,0 +1,32 @@
+<?php $banners = $this->getBanners();?>
+      <div class="flexslider-container">
+        <div class="flexslider">
+          <ul class="slides">
+          <?php foreach($banners as $banner): ?>
+            <li>
+                <a href="<?php echo $banner->getUrl();?>"><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).$banner->getImage();?>" /></a>
+               <p style="width: 100%;
+  padding: 2%;
+  left: 0;
+  bottom: 0;
+  background: rgba(0,0,0,.5);
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.3);
+  font-size: 14px;
+  line-height: 18px;"><?php echo $this->escapeHtml($banner->getTitle()); ?></p>
+                </li>
+          <?php endforeach ?>
+          </ul>
+        </div>
+      </div>
+
+<script type="text/javascript">
++function($){
+   $(document).ready(function(){
+      $('.flexslider').flexslider();
+    });
+}(jQuery);
+
+
+
+</script>
