@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <cms>
+            <children>
+                <banner translate="title"
+                        module="study_banner">
+                    <title>Manage Banners</title>
+                    <sort_order>10</sort_order>
+                    <action>banners/banner</action>
+                </banner>
+            </children>
+        </cms>
+    </menu>
+
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <cms>
+                        <title>Manage Banners</title>
+                    </cms>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Study_Banner>
+            <version>0.4.3</version>
+        </Study_Banner>
+    </modules>
+    <global>
+         
+        <blocks>
+
+            <study_banner_adminhtml>
+                <class>Study_Banner_Block_Adminhtml</class>
+            </study_banner_adminhtml>
+
+            <study_banner_bannerhtml>
+                <class>Study_Banner_Block_Bannerhtml</class>
+            </study_banner_bannerhtml>
+
+        </blocks>
+
+       
+        <helpers>
+            <study_banner>
+                <class>Study_Banner_Helper</class>
+            </study_banner>
+        </helpers>
+
+        <models>
+            <banner>
+                <class>Study_Banner_Model</class>
+                <resourceModel>banner_resource</resourceModel>
+            </banner>
+
+            <banner_resource>
+                <class>Study_Banner_Model_Resource</class>
+                <entities>
+                    <banner>
+                        <table>ronisbt_banners_banner</table>
+                    </banner>
+                </entities>
+            </banner_resource>
+        </models>
+
+        <resources>
+            <banner_setup>
+                <setup>
+                    <module>Study_Banner</module>
+                    <class>Study_Banner_Model_Resource_Setup</class>
+                </setup>
+            </banner_setup>
+        </resources>
+    </global> 
+
+    <admin>
+        <routers>
+            <study_banner_admin>
+                <use>admin</use>
+                <args>
+                   <module before="Mage_Adminhtml">Study_Banner</module>
+                    <frontName>banners</frontName>
+                </args>
+            </study_banner_admin>
+        </routers>
+    </admin>
+</config>            
